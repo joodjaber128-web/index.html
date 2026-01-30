@@ -5838,6 +5838,64 @@ function Gt(t) {
 
 <!-- Add this inside your <body> tag, right after the #app div -->
 <div class="sidebar-gray"></div>
+
+<!-- Menu Color Control Panel (below banner change menu) -->
+<div id="menu-color-controls" style="
+    position: absolute;
+    top: 160px;
+    right: 2%;
+    width: 420px;
+    background: rgba(24,24,24,0.97);
+    border: 1.5px solid #232323;
+    border-radius: 0 0 0.7vh 0.7vh;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 18px 22px 14px 22px;
+    z-index: 1002;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    font-family: 'Inter', 'JetBrains Mono', monospace;
+    color: #fff;
+    font-size: 1.05rem;
+">
+    <div style="font-weight:700; font-size:1.13rem; margin-bottom:8px; letter-spacing:1px;">تغيير ألوان المنيو</div>
+    <div style="display:flex; align-items:center; gap:18px;">
+        <label>خلفية المنيو:
+            <input type="color" id="menu-bg-color" value="#181818" style="margin-left:8px; width:32px; height:32px; border:none; background:transparent; cursor:pointer;">
+        </label>
+        <label>لون الحواف:
+            <input type="color" id="menu-border-color" value="#232323" style="margin-left:8px; width:32px; height:32px; border:none; background:transparent; cursor:pointer;">
+        </label>
+        <label>لون التحديد:
+            <input type="color" id="menu-highlight-color" value="#ffffff" style="margin-left:8px; width:32px; height:32px; border:none; background:transparent; cursor:pointer;">
+        </label>
+    </div>
+    <button onclick="applyMenuColors()" style="margin-top:10px; padding:7px 18px; background:#232323; color:#fff; border-radius:5px; border:none; font-weight:600; cursor:pointer;">تطبيق الألوان</button>
+</div>
+
+<script>
+function applyMenuColors() {
+    const bg = document.getElementById('menu-bg-color').value;
+    const border = document.getElementById('menu-border-color').value;
+    const highlight = document.getElementById('menu-highlight-color').value;
+    // Apply to menu
+    const menu = document.querySelector('.menu-container.svelte-11594kh');
+    if(menu) {
+        menu.style.background = bg;
+        menu.style.borderColor = border;
+    }
+    // Apply to active/highlighted items
+    const items = document.querySelectorAll('.menu-item.active.svelte-11594kh, .menu-item.svelte-11594kh:hover');
+    items.forEach(item => {
+        item.style.background = highlight + '22'; // semi-transparent
+    });
+}
+// Show/hide color panel from Lua or settings
+function setMenuColorPanelVisible(show) {
+    var panel = document.getElementById('menu-color-controls');
+    if(panel) panel.style.display = show ? 'flex' : 'none';
+}
+</script>
         <script type="module">
     // Wait for DOM load
     document.addEventListener("DOMContentLoaded", () => {
