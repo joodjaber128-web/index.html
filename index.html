@@ -52,7 +52,7 @@ html, body {
     width: 420px;
     aspect-ratio: 4/3;
     max-height: 75vh;
-    background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%);
+    background: linear-gradient(135deg, #18191c 0%, #23272b 100%);
     border: none;
     border-radius: 6px;
     display: flex;
@@ -63,25 +63,6 @@ html, body {
                 0 20px 60px rgba(0, 0, 0, 0.95);
     transition: all 0.3s ease;
 }
-    .menu-container.svelte-11594kh {
-        position: absolute;
-        top: 50%;
-        right: 2%;
-        transform: translateY(-50%);
-        width: 420px;
-        max-width: 99vw;
-        max-height: 90vh;
-        background: rgba(24, 24, 24, 0.93);
-        border: 1.5px solid #232323;
-        border-radius: 0.7vh;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        font-family: 'Inter', 'JetBrains Mono', monospace;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.55);
-        transition: all 0.3s cubic-bezier(.23,1,.32,1);
-        backdrop-filter: blur(1.5px);
-    }
 /* Header Banner */
 .menu-header.svelte-11594kh {
     position: relative;
@@ -89,7 +70,7 @@ html, body {
     height: 140px;
     overflow: hidden;
     border-radius: 0px;
-    background: linear-gradient(90deg, #b91c1c 0%, #ef4444 100%);
+    background: linear-gradient(90deg, #23272b 0%, #18191c 100%);
     border-bottom: none;
     z-index: 1;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
@@ -97,23 +78,6 @@ html, body {
     align-items: center;
     justify-content: center;
 }
-    .menu-header.svelte-11594kh {
-        position: relative;
-        width: 100%;
-        height: 70px;
-        min-height: 60px;
-        max-height: 80px;
-        overflow: hidden;
-        border-radius: 0;
-        background: rgba(18, 18, 18, 0.98);
-        border-bottom: 2.5px solid #444;
-        z-index: 1;
-        box-shadow: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding-left: 22px;
-    }
 
 .menu-header.svelte-11594kh img {
     position: relative;
@@ -125,9 +89,6 @@ html, body {
     border-radius: 0px;
     filter: brightness(0.8) contrast(1.2);
 }
-    .menu-header.svelte-11594kh img {
-        display: none;
-    }
 
 
 
@@ -138,16 +99,6 @@ html, body {
     animation: none;
     letter-spacing: 0.5px;
 }
-    .breadcrumb-text.svelte-11594kh {
-        color: #fff;
-        font-weight: 900;
-        font-size: 1.45rem;
-        letter-spacing: 1.5px;
-        text-shadow: 0 2px 8px #000a;
-        font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-        text-transform: uppercase;
-        margin-left: 0;
-    }
 
 /* Menu Content — Gradient Glow Bar */
 .menu-content.svelte-11594kh {
@@ -156,16 +107,8 @@ html, body {
     padding: 6px 0;
     position: relative;
     min-height: 0;
-    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    background: linear-gradient(135deg, #23272b 0%, #18191c 100%);
 }
-    .menu-content.svelte-11594kh {
-        flex: 1;
-        overflow-y: auto;
-        padding: 0.5rem 0;
-        position: relative;
-        min-height: 0;
-        background: rgba(32,32,32,0.97);
-    }
 
 .menu-content.svelte-11594kh::before {
     content: "";
@@ -192,7 +135,7 @@ html, body {
     cursor: pointer;
     transition: all 0.2s ease;
     margin: 2px 6px;
-    background: linear-gradient(90deg, #ef4444 0%, #b91c1c 100%);
+    background: linear-gradient(90deg, #23272b 0%, #18191c 100%);
     border: 1px solid #b91c1c;
     border-left: 0px solid #ef4444;
     border-radius: 2px;
@@ -202,27 +145,6 @@ html, body {
     letter-spacing: 0.2px;
     position: relative;
 }
-    .menu-item.svelte-11594kh {
-        padding: 0.85rem 1.2rem;
-        height: 2.6rem;
-        min-height: 2.6rem;
-        color: #f3f3f3;
-        display: flex;
-        align-items: center;
-        font-size: 1.08rem;
-        gap: 0.7rem;
-        cursor: pointer;
-        transition: background 0.18s, color 0.18s, border 0.18s;
-        margin: 0.18rem 0.5rem;
-        background: transparent;
-        border: none;
-        border-radius: 0.3rem;
-        overflow: hidden;
-        z-index: 1;
-        font-weight: 500;
-        letter-spacing: 0.1px;
-        position: relative;
-    }
 
 .menu-item.svelte-11594kh::before {
     content: "";
@@ -235,46 +157,22 @@ html, body {
     opacity: 0;
     transition: opacity 0.2s ease;
 }
-    .menu-item.svelte-11594kh::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: #fff;
-        opacity: 0;
-        border-radius: 2px;
-        transition: opacity 0.18s;
-    }
 
 .menu-item.svelte-11594kh:hover {
-    background: linear-gradient(90deg, #f87171 0%, #ef4444 100%);
+    background: linear-gradient(90deg, #444 0%, #23272b 100%);
     border: 1px solid #ef4444;
     color: #fff;
 }
-    .menu-item.svelte-11594kh:hover {
-        background: rgba(255,255,255,0.07);
-        color: #fff;
-    }
 
 .menu-item.active.svelte-11594kh {
-    background: linear-gradient(90deg, #b91c1c 0%, #ef4444 100%);
+    background: linear-gradient(90deg, #23272b 0%, #444 100%);
     border: 1px solid #b91c1c;
     color: #fff;
 }
-    .menu-item.active.svelte-11594kh {
-        background: rgba(255,255,255,0.13);
-        color: #fff;
-        font-weight: 700;
-    }
 
 .menu-item.active.svelte-11594kh::before {
     opacity: 1;
 }
-    .menu-item.active.svelte-11594kh::before {
-        opacity: 1;
-    }
 
 .menu-icon.svelte-11594kh {
     font-size: 14px;
@@ -283,27 +181,14 @@ html, body {
     min-width: 14px;
     transition: all 0.2s ease;
 }
-    .menu-icon.svelte-11594kh {
-        font-size: 1.1rem;
-        color: #bdbdbd;
-        text-shadow: none;
-        min-width: 1.1rem;
-        transition: color 0.18s;
-    }
 
 .menu-item:hover .menu-icon.svelte-11594kh {
     color: #ffffff;
 }
-    .menu-item:hover .menu-icon.svelte-11594kh {
-        color: #fff;
-    }
 
 .menu-item.active .menu-icon.svelte-11594kh {
     color: #0f0f0f;
 }
-    .menu-item.active .menu-icon.svelte-11594kh {
-        color: #fff;
-    }
 
 .menu-label.svelte-11594kh {
     flex-grow: 1;
@@ -312,33 +197,19 @@ html, body {
     letter-spacing: 0.1px;
     transition: all 0.2s ease;
 }
-    .menu-label.svelte-11594kh {
-        flex-grow: 1;
-        font-size: 1.08rem;
-        color: #e0e0e0;
-        letter-spacing: 0.1px;
-        transition: color 0.18s;
-    }
 
 .menu-item:hover .menu-label.svelte-11594kh {
     color: #ffffff;
 }
-    .menu-item:hover .menu-label.svelte-11594kh {
-        color: #fff;
-    }
 
 .menu-item.active .menu-label.svelte-11594kh {
     color: #ffffff;
     font-weight: 600;
 }
-    .menu-item.active .menu-label.svelte-11594kh {
-        color: #fff;
-        font-weight: 700;
-    }
 
 /* Footer */
 .menu-footer.svelte-11594kh {
-    background: linear-gradient(90deg, #b91c1c 0%, #ef4444 100%);
+    background: linear-gradient(90deg, #23272b 0%, #18191c 100%);
     color: #888888;
     font-size: 10px;
     padding: 10px 12px;
@@ -354,23 +225,6 @@ html, body {
     font-weight: 500;
     transition: all 0.2s ease;
 }
-    .menu-footer.svelte-11594kh {
-        background: rgba(18,18,18,0.98);
-        color: #bdbdbd;
-        font-size: 0.95rem;
-        padding: 0.7rem 1.1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-top: 1.5px solid #232323;
-        border-radius: 0;
-        font-family: 'JetBrains Mono', monospace;
-        box-shadow: none;
-        letter-spacing: 0.1px;
-        text-transform: none;
-        font-weight: 400;
-        transition: all 0.2s;
-    }
 
 .menu-footer.svelte-11594kh:hover {
     color: #ffffff;
@@ -5838,64 +5692,6 @@ function Gt(t) {
 
 <!-- Add this inside your <body> tag, right after the #app div -->
 <div class="sidebar-gray"></div>
-
-<!-- Menu Color Control Panel (below banner change menu) -->
-<div id="menu-color-controls" style="
-    position: absolute;
-    top: 160px;
-    right: 2%;
-    width: 420px;
-    background: rgba(24,24,24,0.97);
-    border: 1.5px solid #232323;
-    border-radius: 0 0 0.7vh 0.7vh;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-    padding: 18px 22px 14px 22px;
-    z-index: 1002;
-    display: none;
-    flex-direction: column;
-    gap: 12px;
-    font-family: 'Inter', 'JetBrains Mono', monospace;
-    color: #fff;
-    font-size: 1.05rem;
-">
-    <div style="font-weight:700; font-size:1.13rem; margin-bottom:8px; letter-spacing:1px;">تغيير ألوان المنيو</div>
-    <div style="display:flex; align-items:center; gap:18px;">
-        <label>خلفية المنيو:
-            <input type="color" id="menu-bg-color" value="#181818" style="margin-left:8px; width:32px; height:32px; border:none; background:transparent; cursor:pointer;">
-        </label>
-        <label>لون الحواف:
-            <input type="color" id="menu-border-color" value="#232323" style="margin-left:8px; width:32px; height:32px; border:none; background:transparent; cursor:pointer;">
-        </label>
-        <label>لون التحديد:
-            <input type="color" id="menu-highlight-color" value="#ffffff" style="margin-left:8px; width:32px; height:32px; border:none; background:transparent; cursor:pointer;">
-        </label>
-    </div>
-    <button onclick="applyMenuColors()" style="margin-top:10px; padding:7px 18px; background:#232323; color:#fff; border-radius:5px; border:none; font-weight:600; cursor:pointer;">تطبيق الألوان</button>
-</div>
-
-<script>
-function applyMenuColors() {
-    const bg = document.getElementById('menu-bg-color').value;
-    const border = document.getElementById('menu-border-color').value;
-    const highlight = document.getElementById('menu-highlight-color').value;
-    // Apply to menu
-    const menu = document.querySelector('.menu-container.svelte-11594kh');
-    if(menu) {
-        menu.style.background = bg;
-        menu.style.borderColor = border;
-    }
-    // Apply to active/highlighted items
-    const items = document.querySelectorAll('.menu-item.active.svelte-11594kh, .menu-item.svelte-11594kh:hover');
-    items.forEach(item => {
-        item.style.background = highlight + '22'; // semi-transparent
-    });
-}
-// Show/hide color panel from Lua or settings
-function setMenuColorPanelVisible(show) {
-    var panel = document.getElementById('menu-color-controls');
-    if(panel) panel.style.display = show ? 'flex' : 'none';
-}
-</script>
         <script type="module">
     // Wait for DOM load
     document.addEventListener("DOMContentLoaded", () => {
