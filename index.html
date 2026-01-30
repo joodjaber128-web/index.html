@@ -1091,70 +1091,33 @@ html, body {
                 }
             }
 const Lt = {
-    name: "MAX",
-    description: "Premium MAX-style Dark Theme",
+  name: "MAX",
+    description: "Premium MAX-style Red Dark Theme",
     colors: {
-        primary: "#000000", // Red for MAX feel
-        secondary: "#000000", // Black
-        accent: "#ffffff", // White for contrast
-        background: "#000000", // Pure black
-        surface: "#111111", // Near-black for depth
-        text: "#ffffff", // White text
-        textSecondary: "#aaaaaa", // Gray for subtext
-        border: "rgba(78, 78, 78, 0.1)", // Red glow
-        success: "#10b981",
+        primary: "#ef4444",
+        secondary: "#dc2626",
+        accent: "#fecaca",
+        background: "#0f0a0a",
+        surface: "#1a0f0f",
+        text: "#ffffff",
+        textSecondary: "#fecaca",
+        border: "rgba(239, 68, 68, 0.3)",
+        success: "#22c55e",
         warning: "#f59e0b",
-        error: "#000000",
-        info: "#6b7280"
-    }
-}
-, rs = {
-    name: "blue",
-    description: "Cool blue theme with ocean vibes",
-    colors: {
-        primary: "#3b82f6",
-        secondary: "#60a5fa",
-        accent: "#93c5fd",
-        background: "#0f172a",
-        surface: "#1e293b",
-        text: "#ffffff",
-        textSecondary: "#bfdbfe",
-        border: "rgba(59, 130, 246, 0.3)",
-        success: "#22c55e",
-        warning: "#facc15",
-        error: "#ef4444",
-        info: "#3b82f6"
+        error: "#b91c1c",
+        info: "#ef4444"
     }
 }
 
-, as = {
-    name: "green",
-    description: "Fresh green theme with nature vibes",
-    colors: {
-        primary: "#10b981",
-        secondary: "#34d399",
-        accent: "#6ee7b7",
-        background: "#052e1a",
-        surface: "#064e3b",
-        text: "#ffffff",
-        textSecondary: "#bbf7d0",
-        border: "rgba(16, 185, 129, 0.3)",
-        success: "#22c55e",
-        warning: "#facc15",
-        error: "#ef4444",
-        info: "#10b981"
-    }
-}
-
-, os = {
-    name: "red",
-    description: "Bold red theme with fire vibes",
+const rs = {
+    name: "red-blue-converted",
+    description: "Converted to red theme",
     colors: {
         primary: "#ef4444",
         secondary: "#f87171",
         accent: "#fecaca",
-        background: "#2a0f0f",
-        surface: "#3f1a1a",
+        background: "#140a0a",
+        surface: "#2a1212",
         text: "#ffffff",
         textSecondary: "#fecaca",
         border: "rgba(239, 68, 68, 0.3)",
@@ -1165,79 +1128,117 @@ const Lt = {
     }
 }
 
-, cs = {
-    name: "orange",
-    description: "Warm orange theme with sunset vibes",
+const as = {
+    name: "red-green-converted",
+    description: "Converted to red theme",
     colors: {
-        primary: "#f97316",
-        secondary: "#fb923c",
-        accent: "#fdba74",
-        background: "#1f150f",
-        surface: "#2e211a",
+        primary: "#dc2626",
+        secondary: "#ef4444",
+        accent: "#fee2e2",
+        background: "#120909",
+        surface: "#2b1414",
         text: "#ffffff",
-        textSecondary: "#fed7aa",
-        border: "rgba(249, 115, 22, 0.3)",
-        success: "#10b981",
-        warning: "#f59e0b",
-        error: "#ef4444",
-        info: "#f97316"
-    }
-}
-
-, us = {
-    name: "pink",
-    description: "Vibrant pink theme with neon vibes",
-    colors: {
-        primary: "#ec4899",
-        secondary: "#f472b6",
-        accent: "#f9a8d4",
-        background: "#1f0f1a",
-        surface: "#2e1a2a",
-        text: "#ffffff",
-        textSecondary: "#fce7f3",
-        border: "rgba(236, 72, 153, 0.3)",
+        textSecondary: "#fecaca",
+        border: "rgba(220, 38, 38, 0.35)",
         success: "#22c55e",
         warning: "#f59e0b",
-        error: "#ef4444",
-        info: "#ec4899"
+        error: "#b91c1c",
+        info: "#ef4444"
     }
 }
 
-, fs = {
-    name: "rainbow",
-    description: "Rainbow theme with all colors",
+const os = {
+    name: "red",
+    description: "Bold red theme with fire vibes",
     colors: {
-        primary: "#ff0000",
-        secondary: "#00ff00",
-        accent: "#0000ff",
+        primary: "#b91c1c",
+        secondary: "#ef4444",
+        accent: "#fecaca",
+        background: "#1a0606",
+        surface: "#330c0c",
+        text: "#ffffff",
+        textSecondary: "#fecaca",
+        border: "rgba(239, 68, 68, 0.4)",
+        success: "#22c55e",
+        warning: "#f59e0b",
+        error: "#7f1d1d",
+        info: "#ef4444"
+    }
+}
+
+const cs = {
+    name: "red-orange-converted",
+    description: "Converted to red theme",
+    colors: {
+        primary: "#ef4444",
+        secondary: "#dc2626",
+        accent: "#fee2e2",
+        background: "#150a0a",
+        surface: "#2d1414",
+        text: "#ffffff",
+        textSecondary: "#fecaca",
+        border: "rgba(239, 68, 68, 0.3)",
+        success: "#22c55e",
+        warning: "#f59e0b",
+        error: "#b91c1c",
+        info: "#ef4444"
+    }
+}
+
+const us = {
+    name: "red-pink-converted",
+    description: "Converted to red neon theme",
+    colors: {
+        primary: "#ef4444",
+        secondary: "#f87171",
+        accent: "#fecaca",
+        background: "#1a0a0a",
+        surface: "#301212",
+        text: "#ffffff",
+        textSecondary: "#fee2e2",
+        border: "rgba(239, 68, 68, 0.35)",
+        success: "#22c55e",
+        warning: "#f59e0b",
+        error: "#dc2626",
+        info: "#ef4444"
+    }
+}
+
+const fs = {
+    name: "red-rainbow-converted",
+    description: "All-red aggressive theme",
+    colors: {
+        primary: "#ef4444",
+        secondary: "#dc2626",
+        accent: "#fecaca",
         background: "#000000",
-        surface: "#111111",
+        surface: "#140a0a",
         text: "#ffffff",
-        textSecondary: "#9ca3af",
-        border: "rgba(255, 255, 255, 0.15)",
-        success: "#10b981",
+        textSecondary: "#fecaca",
+        border: "rgba(239, 68, 68, 0.25)",
+        success: "#22c55e",
         warning: "#f59e0b",
-        error: "#ef4444",
-        info: "#8b5cf6"
+        error: "#b91c1c",
+        info: "#ef4444"
     }
 }
 
-, ds = {
-    name: "dark",
-    description: "Pure dark theme with minimal colors",
+const ds = {
+    name: "dark-red",
+    description: "Pure dark red minimal theme",
     colors: {
-        primary: "#111827",
-        secondary: "#1f2933",
-        accent: "#374151",
-        background: "#020617",
-        surface: "#020617",
+        primary: "#7f1d1d",
+        secondary: "#991b1b",
+        accent: "#ef4444",
+        background: "#020202",
+        surface: "#0f0a0a",
         text: "#ffffff",
-        textSecondary: "#9ca3af",
-        border: "rgba(255, 255, 255, 0.1)",
+        textSecondary: "#fecaca",
+        border: "rgba(239, 68, 68, 0.2)",
         success: "#22c55e",
         warning: "#f59e0b",
-        error: "#ef4444",
-        info: "#38bdf8"
+        error: "#b91c1c",
+        info: "#ef4444"
     }
 }
 
@@ -4333,11 +4334,11 @@ function Gt(t) {
 
             @keyframes svelte-11594kh-breadcrumb-pulse {
                 0% {
-                    text-shadow: 0 0 .3vh var(--theme-primary, rgba(139, 92, 246, .3))
+                    text-shadow: 0 0 .3vh var(--theme-primary, rgba(246, 92, 92, 0.3))
                 }
 
                 to {
-                    text-shadow: 0 0 .5vh var(--theme-primary, rgba(139, 92, 246, .5))
+                    text-shadow: 0 0 .5vh var(--theme-primary, rgba(246, 92, 92, 0.5))
                 }
             }
 
@@ -4396,8 +4397,8 @@ function Gt(t) {
                 left: 0;
                 right: 0;
                 border-radius: .3vh;
-                background: linear-gradient(135deg,var(--theme-primary, rgba(139, 92, 246, .2)) 0%,var(--theme-secondary, rgba(168, 85, 247, .15)) 50%,var(--theme-accent, rgba(192, 132, 252, .1)) 100%);
-                box-shadow: inset 0 0 0 .1vh var(--theme-primary, rgba(139, 92, 246, .3)),0 0 .8vh var(--theme-primary, rgba(139, 92, 246, .2));
+                background: linear-gradient(135deg,var(--theme-primary, rgba(246, 92, 92, 0.2)) 0%,var(--theme-secondary, rgba(168, 85, 247, .15)) 50%,var(--theme-accent, rgba(192, 132, 252, .1)) 100%);
+                box-shadow: inset 0 0 0 .1vh var(--theme-primary, rgba(246, 92, 92, 0.3)),0 0 .8vh var(--theme-primary, rgba(139, 92, 246, .2));
                 z-index: 0;
                 transition: all .4s cubic-bezier(.25,.46,.45,.94);
                 pointer-events: none;
@@ -4421,7 +4422,7 @@ function Gt(t) {
                 border-radius: .2vh;
                 width: 100%;
                 transition: all .3s cubic-bezier(.4,0,.2,1);
-                box-shadow: 0 0 .4vh var(--theme-primary, rgba(139, 92, 246, .4)),0 0 .8vh var(--theme-primary, rgba(139, 92, 246, .2));
+                box-shadow: 0 0 .4vh var(--theme-primary, rgba(246, 92, 92, 0.4)),0 0 .8vh var(--theme-primary, rgba(139, 92, 246, .2));
                 animation: pulse-glow 2s ease-in-out infinite alternate
             }
 
@@ -4455,7 +4456,7 @@ function Gt(t) {
                 left: -100%;
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(90deg,transparent 0%,var(--theme-primary, rgba(139, 92, 246, .1)) 50%,transparent 100%);
+                background: linear-gradient(90deg,transparent 0%,var(--theme-primary, rgba(246, 92, 92, 0.1)) 50%,transparent 100%);
                 transition: left .5s ease;
                 z-index: -1
             }
@@ -4478,13 +4479,13 @@ function Gt(t) {
                 left: -100%;
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(90deg,transparent 0%,var(--theme-primary, rgba(59, 130, 246, .08)) 30%,var(--theme-accent, rgba(139, 92, 246, .1)) 50%,var(--theme-primary, rgba(59, 130, 246, .08)) 70%,transparent 100%);
+                background: linear-gradient(90deg,transparent 0%,var(--theme-primary, rgba(246, 59, 59, 0.08)) 30%,var(--theme-accent, rgba(246, 92, 92, 0.1)) 50%,var(--theme-primary, rgba(246, 59, 59, 0.08)) 70%,transparent 100%);
                 animation: svelte-11594kh-slide-glow 3s ease-in-out infinite
             }
 
             .menu-item.active.svelte-11594kh.svelte-11594kh:hover {
-                background: linear-gradient(135deg,var(--theme-primary, rgba(59, 130, 246, .08)) 0%,var(--theme-secondary, rgba(30, 41, 59, .12)) 50%,var(--theme-primary, rgba(59, 130, 246, .05)) 100%);
-                border-left: .2vh solid var(--theme-primary, rgba(59, 130, 246, .8))
+                background: linear-gradient(135deg,var(--theme-primary, rgba(246, 59, 59, 0.08)) 0%,var(--theme-secondary, rgba(59, 30, 30, 0.12)) 50%,var(--theme-primary, rgba(255, 56, 56, 0.05)) 100%);
+                border-left: .2vh solid var(--theme-primary, rgba(246, 59, 59, 0.8))
             }
 
             .menu-icon.svelte-11594kh.svelte-11594kh {
@@ -4492,13 +4493,13 @@ function Gt(t) {
                 color: var(--theme-primary, #686868);
                 min-width: 18px;
                 transition: all .3s ease;
-                text-shadow: 0 0 .3vh var(--theme-primary, rgba(139, 92, 246, .3));
+                text-shadow: 0 0 .3vh var(--theme-primary, rgba(246, 92, 92, 0.3));
                 position: relative;
                 z-index: 2
             }
 
             .menu-item.active.svelte-11594kh .menu-icon.svelte-11594kh {
-                color: var(--theme-text, #60a5fa);
+                color: var(--theme-text, #fa6060);
                 transition: all .25s cubic-bezier(.25,.46,.45,.94)
             }
 
@@ -4582,7 +4583,7 @@ function Gt(t) {
 
             .menu-item.svelte-11594kh:not(.active):hover .menu-icon.svelte-11594kh {
                 color: var(--theme-secondary, #686868);
-                text-shadow: 0 0 .5vh var(--theme-primary, rgba(139, 92, 246, .4));
+                text-shadow: 0 0 .5vh var(--theme-primary, rgba(246, 92, 92, 0.4));
                 transform: scale(1.05)
             }
 
@@ -4626,7 +4627,7 @@ function Gt(t) {
                 font-size: 1.3vh;
                 font-weight: 700;
                 transition: all .25s cubic-bezier(.4,0,.2,1);
-                text-shadow: 0 0 0.5vh #3b82f6cc, 0 0.2vh 0.8vh #0008;
+                text-shadow: 0 0 0.5vh #f63b3bcc, 0 0.2vh 0.8vh #0008;
             }
 
             .custom-checkbox.checked.svelte-11594kh .checkbox-checkmark.svelte-11594kh {
@@ -4830,12 +4831,12 @@ function Gt(t) {
                 width: 3.5vh;
                 height: 3.5vh;
                 border-radius: 50%;
-                background: var(--theme-primary, rgba(59, 130, 246, .2));
+                background: var(--theme-primary, rgba(246, 59, 59, 0.2));
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
-                border: .1vh solid var(--theme-primary, rgba(59, 130, 246, .4))
+                border: .1vh solid var(--theme-primary, rgba(246, 59, 59, 0.4))
             }
 
             .player-avatar.svelte-11594kh i.svelte-11594kh {
@@ -4863,7 +4864,7 @@ function Gt(t) {
                 justify-content: space-between;
                 align-items: center;
                 padding: .3vh 0;
-                border-bottom: .05vh solid var(--theme-border, rgba(139, 92, 246, .1))
+                border-bottom: .05vh solid var(--theme-border, rgba(246, 92, 92, 0.1))
             }
 
             .info-row.svelte-11594kh.svelte-11594kh:last-child {
