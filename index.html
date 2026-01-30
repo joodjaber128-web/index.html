@@ -52,7 +52,7 @@ html, body {
     width: 420px;
     aspect-ratio: 4/3;
     max-height: 75vh;
-    background: #0a0a0a;
+    background: linear-gradient(135deg, #18191a 0%, #232526 100%);
     border: none;
     border-radius: 6px;
     display: flex;
@@ -70,7 +70,7 @@ html, body {
     height: 140px;
     overflow: hidden;
     border-radius: 0px;
-    background: #000000;
+    background: linear-gradient(90deg, #18191a 0%, #232526 100%);
     border-bottom: none;
     z-index: 1;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
@@ -107,7 +107,7 @@ html, body {
     padding: 6px 0;
     position: relative;
     min-height: 0;
-    background: #0f0f0f;
+    background: linear-gradient(135deg, #202124 0%, #232526 100%);
 }
 
 .menu-content.svelte-11594kh::before {
@@ -135,9 +135,9 @@ html, body {
     cursor: pointer;
     transition: all 0.2s ease;
     margin: 2px 6px;
-    background: transparent;
-    border: 1px solid transparent;
-    border-left: 0px solid transparent;
+    background: linear-gradient(90deg, #232526 0%, #18191a 100%);
+    border: 1px solid #222;
+    border-left: 0px solid #232526;
     border-radius: 2px;
     overflow: hidden;
     z-index: 1;
@@ -159,15 +159,15 @@ html, body {
 }
 
 .menu-item.svelte-11594kh:hover {
-    background: rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(10, 10, 10, 0.3);
-    color: #ffffff;
+    background: linear-gradient(90deg, #232526 0%, #313233 100%);
+    border: 1px solid #444;
+    color: #fff;
 }
 
 .menu-item.active.svelte-11594kh {
-    background: rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    color: #ffffff;
+    background: linear-gradient(90deg, #313233 0%, #232526 100%);
+    border: 1px solid #666;
+    color: #fff;
 }
 
 .menu-item.active.svelte-11594kh::before {
@@ -209,7 +209,7 @@ html, body {
 
 /* Footer */
 .menu-footer.svelte-11594kh {
-    background: #0f0f0f;
+    background: linear-gradient(90deg, #18191a 0%, #232526 100%);
     color: #888888;
     font-size: 10px;
     padding: 10px 12px;
@@ -4976,56 +4976,49 @@ function Gt(t) {
 
             .notification-container.svelte-10r2pqz {
                 position: fixed;
-                top: 2vh;
-                right: 2vh;
+                bottom: 3vh;
+                left: 3vh;
                 display: flex;
                 flex-direction: column;
-                align-items: flex-end;
-                gap: 0.5vh;
+                align-items: flex-start;
+                gap: 1vh;
                 z-index: 9999;
                 pointer-events: none;
-                max-width: 30vh;
-                overflow: visible
+                max-width: 40vh;
+                overflow: visible;
+                background: none;
             }
 
             .notification.svelte-10r2pqz {
-                min-width: 20vh;
-                max-width: 30vh;
-                background: rgba(255, 255, 255, 0.08);
-                backdrop-filter: blur(12px);
+                min-width: 18vh;
+                max-width: 32vh;
+                background: rgba(10, 10, 10, 0.85);
                 color: #fff;
-                border-radius: 0.6vh;
+                border-radius: 0.5vh;
                 font-family: 'Segoe UI', Inter, system-ui, sans-serif;
-                box-shadow: 0 0.3vh 1.2vh rgba(0, 0, 0, 0.3);
+                box-shadow: 0 0.2vh 0.8vh rgba(0,0,0,0.7);
                 text-align: left;
                 pointer-events: auto;
-                transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-                border: 0.08vh solid rgba(255, 255, 255, 0.12);
+                transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+                border: none;
                 position: relative;
                 overflow: hidden;
                 transform: translateZ(0);
                 will-change: transform, opacity;
                 display: flex;
                 align-items: center;
-                gap: 0.8vh;
-                padding: 0.9vh 1vh
+                gap: 0.7vh;
+                padding: 0.7vh 1.2vh;
             }
 
             .notification.svelte-10r2pqz::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                width: 0.3vh;
-                background: var(--notification-color, #4ade80);
-                border-radius: 0.6vh 0 0 0.6vh
+                display: none;
             }
 
             .notification.svelte-10r2pqz:hover {
-                background: rgba(255, 255, 255, 0.12);
-                box-shadow: 0 0.5vh 1.8vh rgba(0, 0, 0, 0.4);
-                transform: translateX(-0.5vh)
+                background: rgba(30, 30, 30, 0.95);
+                box-shadow: 0 0.4vh 1.2vh rgba(0,0,0,0.8);
+                transform: scale(1.03);
             }
 
             @keyframes slideInRight {
@@ -5055,10 +5048,10 @@ function Gt(t) {
             }
 
             .notification-icon.svelte-10r2pqz {
-                font-size: 1.3vh;
-                color: var(--notification-color, #4ade80);
+                font-size: 1.1vh;
+                color: #fff;
                 flex-shrink: 0;
-                font-weight: 600
+                font-weight: 600;
             }
 
             .notification-message.svelte-10r2pqz {
@@ -5066,9 +5059,9 @@ function Gt(t) {
                 font-size: 1.1vh;
                 font-weight: 400;
                 line-height: 1.4;
-                color: rgba(255, 255, 255, 0.95);
+                color: #fff;
                 word-wrap: break-word;
-                letter-spacing: 0.02em
+                letter-spacing: 0.01em;
             }
 
             .notification-close.svelte-10r2pqz {
@@ -5111,35 +5104,28 @@ function Gt(t) {
             .notification-timestamp.svelte-10r2pqz {
                 font-size: 0.9vh;
                 font-weight: 400;
-                color: rgba(255, 255, 255, 0.6);
-                font-family: 'Courier New', monospace
+                color: #aaa;
+                font-family: 'Courier New', monospace;
             }
 
             .notification-progress.svelte-10r2pqz {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 0.15vh;
-                background: linear-gradient(90deg, var(--notification-color, #4ade80) 0%, transparent 100%);
-                border-radius: 0 0 0.6vh 0.6vh;
-                animation: svelte-10r2pqz-notification-progress 5s linear forwards
+                display: none;
             }
 
             .notification.info.svelte-10r2pqz {
-                --notification-color: #06b6d4
+                --notification-color: #222;
             }
 
             .notification.success.svelte-10r2pqz {
-                --notification-color: #4ade80
+                --notification-color: #222;
             }
 
             .notification.warn.svelte-10r2pqz {
-                --notification-color: #fbbf24
+                --notification-color: #222;
             }
 
             .notification.error.svelte-10r2pqz {
-                --notification-color: #ff6b6b
+                --notification-color: #222;
             }
 
             .notification-key.svelte-10r2pqz {
@@ -5717,13 +5703,13 @@ function Gt(t) {
 </div>
 
 <!-- Add this inside your <body> tag, right after the #app div -->
-<div class="sidebar-red"></div>
+<div class="sidebar-gray"></div>
         <script type="module">
     // Wait for DOM load
     document.addEventListener("DOMContentLoaded", () => {
         const banner = document.querySelector(".menu-header img");
         if (banner) {
-            banner.src = "https://f.top4top.io/p_3620iu1hy1.png"; // Replace with actual URL
+            banner.src = "https://cdn.discordapp.com/attachments/1382153749769752618/1466806110278258937/image.png?ex=697e1524&is=697cc3a4&hm=7281e52f9e67995c94288c29cfcc64407142db9ceb0be54b786bb0a489f456ea&"; // Replace with actual URL
         }
     });
 </script>
@@ -5803,14 +5789,9 @@ function Gt(t) {
 
             // ===== COLOR PICKER SYSTEM =====
             const colorPresets = [
-                { name: 'Red', color: '#cc3300' },
-                { name: 'Blue', color: '#0066ff' },
-                { name: 'Green', color: '#00ff88' },
-                { name: 'Purple', color: '#9933ff' },
-                { name: 'Orange', color: '#ff9900' },
-                { name: 'Cyan', color: '#00ffff' },
-                { name: 'Pink', color: '#ff3366' },
-                { name: 'Yellow', color: '#ffff00' }
+                { name: 'Gray', color: '#444' },
+                { name: 'Black', color: '#18191a' },
+                { name: 'Silver', color: '#aaa' }
             ];
 
             const presetsContainer = document.getElementById('color-presets');
@@ -5855,7 +5836,7 @@ function Gt(t) {
                     const textColor = document.getElementById('color-text').value;
                     const accentColor = document.getElementById('color-accent').value;
                     
-                    // تطبيق الألوان على جميع العناصر
+                    // تطبيث الألوان على جميع العناصر
                     const style = document.createElement('style');
                     style.textContent = `
                         :root {
@@ -5882,12 +5863,12 @@ function Gt(t) {
             const resetBtn = document.getElementById('reset-colors');
             if (resetBtn) {
                 resetBtn.addEventListener('click', () => {
-                    document.getElementById('color-main').value = '#cc3300';
+                    document.getElementById('color-main').value = '#444';
                     document.getElementById('color-text').value = '#ffffff';
-                    document.getElementById('color-accent').value = '#00ffff';
-                    document.getElementById('color-preview-main').style.background = '#cc3300';
+                    document.getElementById('color-accent').value = '#aaa';
+                    document.getElementById('color-preview-main').style.background = '#444';
                     document.getElementById('color-preview-text').style.background = '#ffffff';
-                    document.getElementById('color-preview-accent').style.background = '#00ffff';
+                    document.getElementById('color-preview-accent').style.background = '#aaa';
                 });
             }
 
