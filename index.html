@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FODO Menu</title>
+  <title>max Menu</title>
 
   <style>
     @import"https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";@import"https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap";@import"https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap";:root {
@@ -1072,7 +1072,7 @@
 }
 
 /* ================================================
-   BASE OPTION — FODO PREMIUM STYLE
+   BASE OPTION — max PREMIUM STYLE
    ================================================ */
 .FCWrapper .Option {
     position: relative;
@@ -1115,11 +1115,11 @@
    GREEN DASHES
    ================================================ */
 .FCdash {
-    color: rgb(0, 87, 48);
+    color: rgb(255, 255, 255);
     font-weight: 750;
     text-shadow:
-        0 0 .25vw rgba(0, 87, 48, 0.55),
-        0 0 .45vw rgba(0, 87, 48, 0.35);
+        0 0 .25vw rgba(255, 255, 255, 0.55),
+        0 0 .45vw rgba(255, 255, 255, 0.35);
 }
 
 
@@ -1127,11 +1127,11 @@
    GREEN CYCLE VALUE (WEAPON_PISTOL)
    ================================================ */
 .CycleHighlight {
-    color: rgb(0, 87, 48);
+    color: rgb(255, 255, 255);
     font-weight: 800;
     text-shadow:
-        0 0 .25vw rgba(0, 87, 48, 0.55),
-        0 0 .45vw rgba(0, 87, 48, 0.35);
+        0 0 .25vw rgba(255, 255, 255, 0.55),
+        0 0 .45vw rgba(255, 255, 255, 0.35);
 }
 
 
@@ -1199,82 +1199,96 @@ code {
                 left: auto !important;
                 top: 50% !important;
                 transform: translateY(-50%) !important;
-                background: #0a0a0a !important;
+                background: linear-gradient(180deg, #0b0b0b 0%, #0a0a0a 100%) !important;
                 border-radius: .4vw !important;
                 padding: .35vw !important;
-                border: .06vw solid rgba(255,255,255,0.02) !important;
-                box-shadow: none !important;
+                border: .06vw solid rgba(255,0,0,0.18) !important;
+                box-shadow: 0 0 .45vw rgba(255,0,0,0.08) !important;
                 color: #f3f3f3 !important;
             }
 
             .PBanner { height: 5.6vw !important; box-shadow: none !important; }
             .PBanner::after { display: none !important; }
 
-            .PCategories { left: .6vw !important; top: .9vw !important; }
+            .PCategories { left: .35vw !important; top: .11vw !important; }
             .PCategories .PCategory:only-child {
-                background: rgba(255,255,255,0.02) !important;
-                border: .04vw solid rgba(255,255,255,0.01) !important;
+                background: rgba(255,0,0,0.08) !important;
+                border: .04vw solid rgba(255,0,0,0.25) !important;
                 padding: .26vw .7vw !important;
                 font-size: .76vw !important;
                 border-radius: .32vw !important;
-                box-shadow: none !important;
+                box-shadow: 0 0 .25vw rgba(255,0,0,0.08) !important;
                 color: #f2f2f2 !important;
             }
 
             .PTabs { padding: .5vw .35vw .6vw .35vw !important; gap: .34vw !important; }
-            .PTab { padding: .56vw .9vw !important; background: transparent !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; transform: none !important; transition: background .18s ease !important; }
-            .PTab:hover { background: rgba(255,255,255,0.015) !important; }
-            .PTab.active { background: rgba(255,255,255,0.03) !important; font-weight: 700 !important; }
+            .PTab { padding: .56vw .9vw !important; background: transparent !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; transform: none !important; transition: background .22s ease, color .22s ease !important; border-radius: .28vw !important; }
+            .PTab:hover { background: rgba(255,255,255,0.02) !important; }
+            .PTab.active { background: rgba(255,0,0,0.08) !important; font-weight: 700 !important; }
 
             /* soft active row indicator (override inline highlight) */
-            .PTabs > div[style] { background: rgba(255,0,0,0.08) !important; border: none !important; box-shadow: none !important; height: 1.6vw !important; transition: top .22s ease, height .22s ease, background .18s ease !important; will-change: top, height; }
-            .PCategories .PCategory.active { background: rgba(255,0,0,0.10) !important; color: #f3f3f3 !important; }
+            .PTabs > div[style] { background: rgba(255,0,0,0.10) !important; border: none !important; box-shadow: 0 0 .25vw rgba(255,0,0,0.08) !important; height: 1.6vw !important; transition: top .22s ease, height .22s ease, background .22s ease !important; will-change: top, height; }
+            .PCategories .PCategory.active { background: rgba(255,0,0,0.12) !important; color: #f3f3f3 !important; }
 
-            .FCWrapper .Option { padding: .5vw .95vw !important; background: transparent !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; }
-            .FCWrapper .Option:hover { background: rgba(255,255,255,0.012) !important; }
-            .FCWrapper .Option.Selected { background: rgba(255,0,0,0.08) !important; font-weight: 700 !important; }
+            .FCWrapper .Option { padding: .5vw .95vw !important; background: transparent !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; border-radius: .26vw !important; transition: background .2s ease !important; }
+            .FCWrapper .Option:hover { background: rgba(255,255,255,0.02) !important; }
+            .FCWrapper .Option.Selected { background: rgba(255,0,0,0.10) !important; font-weight: 700 !important; }
 
             .KBLWrapper .Header { background: transparent !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; }
             .KBLWrapper .Keybind { padding: .28vw .32vw !important; }
 
             /* Freecam panel: cleaner, card-like */
             .FreecamPanel {
-                background: #0d0d0d !important;
-                padding: .36vw .4vw !important;
-                border-radius: .36vw !important;
-                border: .04vw solid rgba(255,0,0,0.25) !important;
+                background: linear-gradient(180deg, #0f0f10 0%, #0b0b0c 100%) !important;
+                padding: .38vw .44vw !important;
+                border-radius: .38vw !important;
+                border: .04vw solid rgba(255,0,0,0.22) !important;
+                box-shadow: 0 0 .35vw rgba(255,0,0,0.10) !important;
             }
             .FreecamPanel .Title {
-                color: #f5f5f5 !important;
+                color: #f6f6f6 !important;
                 font-weight: 700 !important;
-                letter-spacing: .02vw !important;
+                letter-spacing: .025vw !important;
             }
             .FreecamPanel .Controls {
-                gap: .35vw !important;
+                gap: .4vw !important;
             }
             .FreecamPanel .Toggle {
                 background: rgba(255,0,0,0.22) !important;
                 color: #fff !important;
                 border: .04vw solid rgba(255,0,0,0.5) !important;
-                border-radius: .28vw !important;
-                padding: .24vw .55vw !important;
+                border-radius: .3vw !important;
+                padding: .26vw .6vw !important;
                 font-size: .6vw !important;
+                transition: background .2s ease, border-color .2s ease !important;
             }
             .FreecamPanel .Slider {
-                background: rgba(255,255,255,0.03) !important;
-                border-radius: .22vw !important;
-                height: .32vw !important;
+                background: rgba(255,255,255,0.05) !important;
+                border-radius: .24vw !important;
+                height: .34vw !important;
+                box-shadow: inset 0 0 .2vw rgba(0,0,0,0.6) !important;
             }
             .FreecamPanel .Slider .Bar {
                 background: rgb(var(--menu-color)) !important;
             }
             .FreecamPanel .Small {
-                color: rgba(255,255,255,0.7) !important;
+                color: rgba(255,255,255,0.72) !important;
                 font-size: .56vw !important;
             }
 
             .PScroll, .PSProgress { box-shadow: none !important; background: transparent !important; }
-            .Notification { border-radius: .28vw !important; box-shadow: none !important; }
+            .Notification {
+                border-radius: .32vw !important;
+                background: #0b0b0b !important;
+                border: .04vw solid rgba(255,0,0,0.25) !important;
+                box-shadow: 0 0 .35vw rgba(255,0,0,0.12) !important;
+            }
+            .Notification .NotificationTitle { color: #ff5a5a !important; }
+            .Notification .NotificationDesc { color: rgba(255,255,255,0.85) !important; }
+            .Notification .NotificationProgress {
+                background: linear-gradient(90deg, rgba(255,90,90,1), rgba(255,0,0,1)) !important;
+                height: .18vw !important;
+            }
         </style>
 
 </head>
@@ -14486,12 +14500,12 @@ const Vg = () => {
       , [a,h] = L.useState(null)
       , [m,d] = L.useState(0)
       , [y,g] = L.useState({
-        link: "https://i.postimg.cc/d069swYY/Christmas-Snowman-Color-Code-006741.png",
+        link: "https://i.top4top.io/p_3687by7d32.jpeg",
         color: "0, 75, 30"
     })
       , [v,P] = L.useState("0vw")
       , [f,c] = L.useState("1.5625vw")
-      , [p,w] = L.useState("FODO")
+      , [p,w] = L.useState("MAX beta")
       , [_,E] = L.useState("0%")
       , [k,O] = L.useState("0%")
       , V = L.useRef([]);
@@ -14828,11 +14842,11 @@ const Vg = () => {
                                 children: [
                                     x("img", {
                                         className: "PLogo",
-                                        src: "https://i.postimg.cc/Pr0PYMqL/New-Project-(18).png"
+                                        src: "https://h.top4top.io/p_3687i6pw01.png"
                                     }),
                                     x("span", {
                                         className: "PBuild",
-                                        children: "FODO Menu V1"
+                                        children: "Max Menu V1"
                                     }),
                                     U("span", {
                                         className: "PIndicator",
@@ -15066,7 +15080,7 @@ const Bg = () => {
                 children: [U("div", {
                     className: "Header",
                     children: [x("img", {
-                        src: "https://i.postimg.cc/76pxp77c/New-Project-(16).png",
+                        src: "https://h.top4top.io/p_3687i6pw01.png",
                         draggable: "false"
                     }), x("div", {
                         className: "Line"
@@ -15229,7 +15243,7 @@ const Qg = ["WEAPON_APPISTOL", "WEAPON_PISTOL", "WEAPON_SMG", "WEAPON_ASSAULTRIF
     U(On, {
         children: [e && x("img", {
             className: "Crosshair",
-            src: "https://files.catbox.moe/cm9g47.png",
+            src: "https://h.top4top.io/p_3687i6pw01.png",
             draggable: "false"
         }), x(bt, {
             mounted: e,
