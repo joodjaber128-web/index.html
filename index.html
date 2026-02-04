@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RDX1 Menu</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FODO Menu</title>
 
   <style>
     @import"https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";@import"https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap";@import"https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap";:root {
-    --menu-color: 0, 120, 255;
+    --menu-color: 0, 75, 30;
     :root {
-    --menu-color: 0, 120, 255;
+    --menu-color: 0, 75, 30;
 
     /* NEW menu position variables */
     --menu-x: 50vw;
@@ -44,9 +45,9 @@
     position: absolute;
     display: flex;
 
-    right: 2vw;
-    top: 50%;
-    transform: translateY(-50%);
+    left: var(--menu-x);
+    top: var(--menu-y);
+    transform: translate(5%, 5%);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -572,7 +573,7 @@
 
     /* Soft outer glow for premium look */
     box-shadow:
-        0 0 .42vw rgba(var(--menu-color), 0.45),
+        0 0 .42vw rgba(0, 75, 30, 0.45),
         inset 0 0 .26vw rgba(0, 0, 0, 0.55);
 
     border-radius: .2604vw;  /* SAME RADIUS */
@@ -754,12 +755,13 @@
     /* ⬛ CLEAN BLACK BOX */
     background: rgba(0, 0, 0, 0.90);
 
-    border: .12vw solid rgba(var(--menu-color), 0.85);
+    /* 🟩 DARK GREEN BORDER */
+    border: .12vw solid rgba(0, 75, 30, 0.85);
 
-    /* subtle colored glow using theme variable */
+    /* ✨ SUBTLE GREEN GLOW */
     box-shadow:
-        0 0 .4vw rgba(var(--menu-color), 0.15),
-        inset 0 0 .25vw rgba(var(--menu-color), 0.15);
+        0 0 .4vw rgba(0, 255, 120, 0.15),
+        inset 0 0 .25vw rgba(0, 255, 120, 0.15);
 
     /* ⬜ SHARP CORNERS (NO ROUNDED EDGES) */
     border-radius: .15vw;
@@ -797,7 +799,7 @@
     opacity: .9;
     margin-left: .1vw;
     flex-shrink: 0;
-    color: rgb(var(--menu-color));
+    color: rgb(0, 255, 120);
 }
 
 /* ============================================================
@@ -806,7 +808,7 @@
 .Notification .NotificationTitle {
     font-size: .78vw;
     font-weight: 700;
-    color: rgb(var(--menu-color));
+    color: rgb(0, 255, 120);
 }
 
 .Notification .NotificationDesc {
@@ -1070,7 +1072,7 @@
 }
 
 /* ================================================
-   BASE OPTION — RDX1 PREMIUM STYLE
+   BASE OPTION — FODO PREMIUM STYLE
    ================================================ */
 .FCWrapper .Option {
     position: relative;
@@ -1113,11 +1115,11 @@
    GREEN DASHES
    ================================================ */
 .FCdash {
-    color: rgb(var(--menu-color));
+    color: rgb(0, 87, 48);
     font-weight: 750;
     text-shadow:
-        0 0 .25vw rgba(var(--menu-color), 0.55),
-        0 0 .45vw rgba(var(--menu-color), 0.35);
+        0 0 .25vw rgba(0, 87, 48, 0.55),
+        0 0 .45vw rgba(0, 87, 48, 0.35);
 }
 
 
@@ -1125,11 +1127,11 @@
    GREEN CYCLE VALUE (WEAPON_PISTOL)
    ================================================ */
 .CycleHighlight {
-    color: rgb(var(--menu-color));
+    color: rgb(0, 87, 48);
     font-weight: 800;
     text-shadow:
-        0 0 .25vw rgba(var(--menu-color), 0.55),
-        0 0 .45vw rgba(var(--menu-color), 0.35);
+        0 0 .25vw rgba(0, 87, 48, 0.55),
+        0 0 .45vw rgba(0, 87, 48, 0.35);
 }
 
 
@@ -1186,123 +1188,99 @@ code {
     height: 0
 }
 
-    </style>
-<style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style>
+  </style>
+        <!-- Final override: red/black theme, right-aligned, clean Freecam -->
+        <style>
+            :root { --menu-color: 255, 20, 20; }
 
-    <!-- Custom exclusive menu theme -->
-    <style>
-        :root { --menu-radius: 0.6vw; --menu-width: 19.2vw; }
+            .PWrapper {
+                position: absolute !important;
+                right: 2vw !important;
+                left: auto !important;
+                top: 50% !important;
+                transform: translateY(-50%) !important;
+                background: #0a0a0a !important;
+                border-radius: .4vw !important;
+                padding: .35vw !important;
+                border: .06vw solid rgba(255,255,255,0.02) !important;
+                box-shadow: none !important;
+                color: #f3f3f3 !important;
+            }
 
-        /* overall wrapper: glassy, narrow like the reference */
-        .PWrapper {
-            width: var(--menu-width);
-            background: linear-gradient(180deg, rgba(10,10,12,0.86), rgba(4,4,6,0.6));
-            border-radius: var(--menu-radius);
-            padding: .25vw;
-            box-shadow: 0 .9vw 2.4vw rgba(0,0,0,0.75), 0 0 1.1vw rgba(var(--menu-color),0.06) inset;
-            border: .08vw solid rgba(255,255,255,0.02);
-            backdrop-filter: blur(6px) saturate(1.05);
-            overflow: hidden;
-        }
+            .PBanner { height: 5.6vw !important; box-shadow: none !important; }
+            .PBanner::after { display: none !important; }
 
-        /* Top banner — darker, prominent logo zone like the image */
-        .PBanner {
-            height: 6.6vw;
-            border-top-left-radius: calc(var(--menu-radius) - .04vw);
-            border-top-right-radius: calc(var(--menu-radius) - .04vw);
-            position: relative;
-            overflow: hidden;
-            box-shadow: inset 0 -0.45vw 1.1vw rgba(0,0,0,0.6);
-        }
-        .PBanner img { width: 100%; height: 100%; object-fit: cover; opacity: .96; filter: contrast(.95) saturate(.9); }
-        .PBanner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.5)); pointer-events: none; }
+            .PCategories { left: .6vw !important; top: .9vw !important; }
+            .PCategories .PCategory:only-child {
+                background: rgba(255,255,255,0.02) !important;
+                border: .04vw solid rgba(255,255,255,0.01) !important;
+                padding: .26vw .7vw !important;
+                font-size: .76vw !important;
+                border-radius: .32vw !important;
+                box-shadow: none !important;
+                color: #f2f2f2 !important;
+            }
 
-        /* small top-left tab label (Main Menu) positioned over the banner */
-        /* position the small label neatly inside the banner (top-left) */
-        .PCategories { position: absolute; left: .6vw; top: .9vw; width: auto; background: transparent; z-index: 60; pointer-events: auto; }
-        .PCategory:only-child { position: relative; left: 0; top: 0; padding: .32vw .95vw; font-size: .78vw; background: rgba(0,0,0,0.62); color: #eaf0ff; border-radius: .44vw; border: .05vw solid rgba(255,255,255,0.025); box-shadow: 0 .12vw .36vw rgba(0,0,0,0.7); }
+            .PTabs { padding: .5vw .35vw .6vw .35vw !important; gap: .34vw !important; }
+            .PTab { padding: .56vw .9vw !important; background: transparent !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; transform: none !important; transition: background .18s ease !important; }
+            .PTab:hover { background: rgba(255,255,255,0.015) !important; }
+            .PTab.active { background: rgba(255,255,255,0.03) !important; font-weight: 700 !important; }
 
-        /* Tabs list — stacked dark rows similar to screenshot */
-        .PTabs { margin-top: 1.1vw; padding: .6vw .35vw .8vw .35vw; background: transparent; display: flex; flex-direction: column; gap: .36vw; }
-        .PTab { display: flex; align-items: center; justify-content: space-between; gap: .6vw;
-            padding: .62vw .9vw; margin: 0; border-radius: .36vw; background: linear-gradient(180deg, rgba(255,255,255,0.012), rgba(0,0,0,0.10)); color: #e6eefc; border: .04vw solid rgba(255,255,255,0.01);
-            box-shadow: 0 .06vw .14vw rgba(0,0,0,0.6) inset; cursor: pointer; transition: transform .14s ease, background .14s ease, padding .14s ease; font-weight: 500; font-size: .78vw; line-height: 1.2; }
-        .PTab:hover { transform: translateX(.18vw); background: linear-gradient(180deg, rgba(255,255,255,0.024), rgba(0,0,0,0.18)); padding-left: calc(.9vw + .06vw); }
-        .PTab.active { background: linear-gradient(90deg, rgba(var(--menu-color),0.20), rgba(var(--menu-color),0.08)); box-shadow: 0 .32vw .8vw rgba(var(--menu-color),0.12); color: #fff; font-weight: 700; }
-        .PTab + .PTab { margin-top: 0; }
+            /* soft active row indicator (override inline highlight) */
+            .PTabs > div[style] { background: rgba(255,0,0,0.08) !important; border: none !important; box-shadow: none !important; height: 1.6vw !important; transition: top .22s ease, height .22s ease, background .18s ease !important; will-change: top, height; }
+            .PCategories .PCategory.active { background: rgba(255,0,0,0.10) !important; color: #f3f3f3 !important; }
 
-        .PTLabel { position: relative; left: 0; color: inherit; }
-        .PTab i { color: rgba(255,255,255,0.6); font-size: .9vw; }
+            .FCWrapper .Option { padding: .5vw .95vw !important; background: transparent !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; }
+            .FCWrapper .Option:hover { background: rgba(255,255,255,0.012) !important; }
+            .FCWrapper .Option.Selected { background: rgba(255,0,0,0.08) !important; font-weight: 700 !important; }
 
-        /* Replace the small chevron look: tighter and subtle */
-        .PTab.active i { color: rgba(255,255,255,0.9); }
+            .KBLWrapper .Header { background: transparent !important; border-bottom: 1px solid rgba(255,255,255,0.03) !important; }
+            .KBLWrapper .Keybind { padding: .28vw .32vw !important; }
 
-        /* Scrollbar thumb polish */
-        .PScroll { right: -0.9vw; background: transparent; width: .7vw; }
-        .PSProgress { background: linear-gradient(180deg, rgba(var(--menu-color),0.98), rgba(0,170,255,0.9)); box-shadow: 0 0 .36vw rgba(var(--menu-color),0.24); border-radius: .22vw; }
+            /* Freecam panel: cleaner, card-like */
+            .FreecamPanel {
+                background: #0d0d0d !important;
+                padding: .36vw .4vw !important;
+                border-radius: .36vw !important;
+                border: .04vw solid rgba(255,0,0,0.25) !important;
+            }
+            .FreecamPanel .Title {
+                color: #f5f5f5 !important;
+                font-weight: 700 !important;
+                letter-spacing: .02vw !important;
+            }
+            .FreecamPanel .Controls {
+                gap: .35vw !important;
+            }
+            .FreecamPanel .Toggle {
+                background: rgba(255,0,0,0.22) !important;
+                color: #fff !important;
+                border: .04vw solid rgba(255,0,0,0.5) !important;
+                border-radius: .28vw !important;
+                padding: .24vw .55vw !important;
+                font-size: .6vw !important;
+            }
+            .FreecamPanel .Slider {
+                background: rgba(255,255,255,0.03) !important;
+                border-radius: .22vw !important;
+                height: .32vw !important;
+            }
+            .FreecamPanel .Slider .Bar {
+                background: rgb(var(--menu-color)) !important;
+            }
+            .FreecamPanel .Small {
+                color: rgba(255,255,255,0.7) !important;
+                font-size: .56vw !important;
+            }
 
-        /* Footer: compact dark strip with left info and right counter */
-        .PFooter { height: 1.6vw; background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.75)); border-top: .06vw solid rgba(255,255,255,0.02); display: flex; align-items: center; padding: 0 .6vw; }
-        .PFooter img { left: .4vw; width: 1.02vw; height: auto; }
-        .PBuild { position: absolute; left: 2.2vw; font-size: .62vw; color: rgba(255,255,255,0.9); }
-        .PIndicator { position: absolute; right: .6vw; font-size: .62vw; color: rgba(255,255,255,0.75); }
-
-        /* Options list — compact, glossy separators */
-        .FCWrapper .Option { background: transparent; padding: .6vw 1vw; margin: 0; border-radius: .28vw; color: #e8f1ff; font-size: .95vw; transition: background .12s ease, transform .12s ease, padding .12s ease; }
-        .FCWrapper .Option:not(:last-child) { border-bottom: .06vw solid rgba(255,255,255,0.02); }
-        .FCWrapper .Option:hover { background: rgba(255,255,255,0.02); transform: translateX(.12vw); padding-left: 1.04vw; }
-        .FCWrapper .Option.Selected { background: linear-gradient(90deg, rgba(var(--menu-color),0.16), rgba(var(--menu-color),0.06)); color: #fff; font-weight: 800; box-shadow: 0 .28vw .8vw rgba(var(--menu-color),0.10) inset; transform: scale(1.01); }
-
-        /* Keybind box accent */
-        .KBLWrapper { right: 1.04vw; top: 1.04vw; }
-        .KBLWrapper .Header { background: rgba(255,255,255,0.02); border-bottom: .06vw solid rgba(var(--menu-color),0.06); }
-
-        /* Readability tweaks */
-        .PRightElements { padding: .28vw; }
-        .PCategories .PCategory.active { box-shadow: none; }
-
-        /* small notification rounding */
-        .Notification { border-radius: .35vw; }
-    </style>
-
-
-
-    <!-- Final override: enforce light, consistent, minimal look -->
-    <style>
-      .PWrapper { background:#0f1113 !important; border-radius:.4vw !important; padding:.35vw !important; border:.06vw solid rgba(255,255,255,0.02) !important; box-shadow:none !important; color:#e8eefc !important; }
-      .PBanner { height:5.8vw !important; box-shadow:none !important; }
-      .PBanner::after { display:none !important; }
-
-      .PCategories { left:.6vw !important; top:.9vw !important; }
-      .PCategories .PCategory:only-child { background: rgba(255,255,255,0.02) !important; border:.04vw solid rgba(255,255,255,0.01) !important; padding:.26vw .7vw !important; font-size:.76vw !important; border-radius:.32vw !important; box-shadow:none !important; }
-
-      .PTabs { padding:.5vw .35vw .6vw .35vw !important; gap:.34vw !important; }
-      .PTab { padding:.56vw .9vw !important; background:transparent !important; border-bottom:1px solid rgba(255,255,255,0.03) !important; transform:none !important; transition:background .06s ease !important; }
-      .PTab:hover { background: rgba(255,255,255,0.015) !important; }
-      .PTab.active { background: rgba(255,255,255,0.03) !important; font-weight:700 !important; }
-
-      /* soft active row indicator (override inline highlight) */
-      .PTabs > div[style] { background: rgba(255,255,255,0.02) !important; border: none !important; box-shadow: none !important; height: 1.6vw !important; }
-      .PCategories .PCategory.active { background: rgba(255,255,255,0.03) !important; color: var(--text) !important; }
-
-      .FCWrapper .Option { padding:.5vw .95vw !important; background:transparent !important; border-bottom:1px solid rgba(255,255,255,0.03) !important; }
-      .FCWrapper .Option:hover { background: rgba(255,255,255,0.012) !important; }
-      .FCWrapper .Option.Selected { background: rgba(255,255,255,0.03) !important; font-weight:700 !important; }
-
-      .KBLWrapper .Header { background:transparent !important; border-bottom:1px solid rgba(255,255,255,0.03) !important; }
-      .KBLWrapper .Keybind { padding:.28vw .32vw !important; }
-
-      .FreecamPanel { background: rgba(255,255,255,0.01) !important; padding:.28vw !important; border-radius:.3vw !important; }
-      .FreecamPanel .Toggle { background: rgba(255,255,255,0.02) !important; }
-
-      .PScroll, .PSProgress { box-shadow:none !important; background:transparent !important; }
-      .Notification { border-radius:.28vw !important; box-shadow:none !important; }
-    </style>
+            .PScroll, .PSProgress { box-shadow: none !important; background: transparent !important; }
+            .Notification { border-radius: .28vw !important; box-shadow: none !important; }
+        </style>
 
 </head>
 
 <body>
-  <div id="root" style=""><div style="visibility: visible; height: 100%;"><div class="PWrapper"><div class="PBanner"><img src="./Gtx Menu_files/mf-FIYo-U.png" draggable="false"></div><div class="PElements"><div class="PScroll"><i class="fa-solid fa-angle-up"></i><div class="PSProgressWrapper"><div class="PSProgress" style="height: 97%; top: 0%;"></div></div><i class="fa-solid fa-angle-down"></i></div><div class="PRightElements"><div class="PCategories"><div class="PCategory active">Main Menu</div></div><div class="PTabs"><div style="position: absolute; width: 100%; top: 0vw; height: 1.5625vw; background-color: rgba(0, 132, 255, 0.6); border: 0.052vw solid rgb(0, 162, 255); border-radius: 0.3083vw; box-shadow: rgb(0, 174, 255) 0vw 0vw 0.2083vw 0.0339vw; z-index: 0; transition: top 200ms, height 120ms; pointer-events: none;"></div><div class="PTab active"><span class="PTLabel">Player</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Weapon</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Server</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Combat</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Vehicle</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Visual</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Miscellaneous</span><i class="fa-solid fa-angle-right"></i></div><div class="PTab "><span class="PTLabel">Settings</span><i class="fa-solid fa-angle-right"></i></div></div><div class="PFooter"><img class="PLogo" src="./Gtx Menu_files/1ef3dff8bebea3f343874bed403b059e.webp"><span class="PBuild">GtX Menu v1</span><span class="PIndicator">(1/8)</span></div></div></div></div><div class="NotificationsWrapper"></div><div class="KBLWrapper"><div class="Header"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--fe Icon" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M2 8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm15 6v2h3v-2zm-3 0v2h2v-2zm-7 0v2h6v-2zm-3 0v2h2v-2zm14-3v2h2v-2zm-3 0v2h2v-2zm-3 0v2h2v-2zm-3 0v2h2v-2zm-5 0v2h4v-2zm12-3v2h4V8zm-3 0v2h2V8zm-3 0v2h2V8zM7 8v2h2V8zM4 8v2h2V8z"></path></svg><span>Keybinds</span></div><div class="Keybinds"><div class="Keybind"><div class="Label">Noclip</div><div class="Elements"><span>(U)</span><span style="color: white;">On</span></div></div><div class="Keybind"><div class="Label">Freecam</div><div class="Elements"><span>(H)</span><span style="color: rgba(255, 255, 255, 0.5);">Off</span></div></div><div class="Keybind"><div class="Label">Refill Health</div><div class="Elements"><span>Z</span></div></div><div class="Keybind"><div class="Label">Refill Armour</div><div class="Elements"><span>Z</span></div></div></div></div><img class="Crosshair" src="./Gtx Menu_files/cm9g47.png" draggable="false"><div class="FCWrapper"><div class="Option Selected" style="opacity: 1;"><span class="FCdash">-</span>&nbsp;&nbsp;Default&nbsp;&nbsp;<span class="FCdash">-</span></div><div class="Option " style="opacity: 0.9;"></div><div class="Option " style="opacity: 0.8;">Shoot Weapon</div><div class="Option " style="opacity: 0.7;"></div><div class="Option " style="opacity: 0.6;"></div><div class="Option " style="opacity: 0.5;"></div><div class="Option " style="opacity: 0.4;">Delete Vehicle</div></div></div></div>
+  <div id="root"></div>
 
   <script>
     // =========================
@@ -14341,7 +14319,7 @@ const Vg = () => {
     const [e,t] = L.useState(!1)
       , n = [{
         type: "subMenu",
-        label: "Self",
+        label: "Player",
         categories: [{
             label: "Player",
             tabs: [{
@@ -14357,7 +14335,7 @@ const Vg = () => {
                 value: 50
             }, {
                 type: "scrollable-checkbox",
-                label: "God Mode",
+                label: "Godmode",
                 checked: !0,
                 value: 1,
                 values: ["Safe"]
@@ -14366,14 +14344,14 @@ const Vg = () => {
                 label: "Movement"
             }, {
                 type: "slider-checkbox",
-                label: "Speed",
+                label: "Noclip",
                 value: 2.5,
                 min: .25,
                 max: 5,
                 step: .25
             }]
         }, {
-            label: "Misc",
+            label: "Miscellaneous",
             tabs: [{
                 type: "scrollable",
                 label: "Clear Tasks",
@@ -14381,10 +14359,10 @@ const Vg = () => {
                 values: ["Primary", "Secondary"]
             }, {
                 type: "subMenu",
-                label: "Tools"
+                label: "Equipment"
             }]
         }, {
-            label: "Clothing",
+            label: "Wardrobe",
             tabs: [{
                 type: "scrollable",
                 label: "Outfit",
@@ -14400,7 +14378,7 @@ const Vg = () => {
         }]
     }, {
         type: "subMenu",
-        label: "Weapons",
+        label: "Weapon",
         categories: [{
             label: "Loadouts",
             tabs: [{
@@ -14414,7 +14392,7 @@ const Vg = () => {
             label: "Attachments",
             tabs: [{
                 type: "subMenu",
-                label: "Systems"
+                label: "Scopes"
             }, {
                 type: "subMenu",
                 label: "Barrels"
@@ -14427,10 +14405,10 @@ const Vg = () => {
             label: "List",
             tabs: [{
                 type: "button",
-                label: "Select All"
+                label: "Select Everyone"
             }, {
                 type: "button",
-                label: "Deselect All"
+                label: "Un-Select Everyone"
             }, {
                 type: "button",
                 label: "Clear Selection"
@@ -14491,7 +14469,7 @@ const Vg = () => {
         label: "Combat"
     }, {
         type: "subMenu",
-        label: "Vehicles"
+        label: "Vehicle"
     }, {
         type: "subMenu",
         label: "Visual"
@@ -14507,13 +14485,13 @@ const Vg = () => {
       , [s,u] = L.useState([])
       , [a,h] = L.useState(null)
       , [m,d] = L.useState(0)
-            , [y,g] = L.useState({
-                link: "https://i.top4top.io/p_3684n4ac41.png",
-                color: "0, 120, 255"
-        })
+      , [y,g] = L.useState({
+        link: "https://i.postimg.cc/d069swYY/Christmas-Snowman-Color-Code-006741.png",
+        color: "0, 75, 30"
+    })
       , [v,P] = L.useState("0vw")
       , [f,c] = L.useState("1.5625vw")
-      , [p,w] = L.useState("RDX1")
+      , [p,w] = L.useState("FODO")
       , [_,E] = L.useState("0%")
       , [k,O] = L.useState("0%")
       , V = L.useRef([]);
@@ -14679,7 +14657,7 @@ const Vg = () => {
                         children: "\xA0(Some servers may detect this module)"
                     }), r[i].locked && x("span", {
                         style: {
-                            color: "#0078ffff"
+                            color: "#fc0303ff"
                         },
                         children: "\xA0(Locked/Disabled)"
                     })]
@@ -14841,7 +14819,7 @@ const Vg = () => {
                                             position: "absolute",
                                             display: "flex",
                                             right: "2.8vw",
-                                            color: S.isDriver ? `rgb(${y.color})` : "#0078ffff"
+                                            color: S.isDriver ? `rgb(${y.color})` : "#df2929ff"
                                         }
                                     })]
                                 }, F))]
@@ -14850,11 +14828,11 @@ const Vg = () => {
                                 children: [
                                     x("img", {
                                         className: "PLogo",
-                                        src: "https://i.top4top.io/p_3684n4ac41.png"
+                                        src: "https://i.postimg.cc/Pr0PYMqL/New-Project-(18).png"
                                     }),
                                     x("span", {
                                         className: "PBuild",
-                                        children: " v2 beta"
+                                        children: "FODO Menu V1"
                                     }),
                                     U("span", {
                                         className: "PIndicator",
@@ -15006,7 +14984,7 @@ const Wg = () => {
         }
     }
     , [e.id, e.duration, t]);
-    const l = e.type === "success" ? "#23ff2a" : e.type === "error" ? "#0078ff" : "rgb(39, 140, 255)";
+    const l = e.type === "success" ? "#23ff2a" : e.type === "error" ? "#ff1100" : "rgb(39, 140, 255)";
     return U("div", {
         ref: n,
         id: `notif-${e.id}`,
@@ -15014,7 +14992,7 @@ const Wg = () => {
         children: [x("div", {
             className: "NotificationBorder",
             style: {
-                backgroundColor: e.type === "success" ? "#23ff2a" : e.type === "error" ? "#0078ff" : "rgb(39, 140, 255)"
+                backgroundColor: e.type === "success" ? "#23ff2a" : e.type === "error" ? "#ff1100" : "rgb(39, 140, 255)"
             }
         }), x("i", {
             className: "fa-solid fa-circle-info",
@@ -15034,7 +15012,7 @@ const Wg = () => {
             className: "NotificationProgress",
             style: {
                 animationDuration: `${e.duration}ms`,
-                backgroundColor: e.type === "success" ? "#23ff2a" : e.type === "error" ? "#0078ff" : "rgb(39, 140, 255)"
+                backgroundColor: e.type === "success" ? "#23ff2a" : e.type === "error" ? "#ff1100" : "rgb(39, 140, 255)"
             }
         })]
     })
@@ -15088,7 +15066,7 @@ const Bg = () => {
                 children: [U("div", {
                     className: "Header",
                     children: [x("img", {
-                        src: "https://i.top4top.io/p_3684n4ac41.png",
+                        src: "https://i.postimg.cc/76pxp77c/New-Project-(16).png",
                         draggable: "false"
                     }), x("div", {
                         className: "Line"
@@ -15194,25 +15172,25 @@ const Qg = ["WEAPON_APPISTOL", "WEAPON_PISTOL", "WEAPON_SMG", "WEAPON_ASSAULTRIF
   , Yg = () => {
        const [e,t] = L.useState(!1)
       , [n] = L.useState([{
-        label: ""
+        label: "Default"
     }, {
-        label: ""
+        label: "Teleport"
     }, {
-        label: ""
+        label: "Shoot Weapon"
     }, {
-        label: ""
+        label: "Spawn Car"
     }, {
-        label: ""
+        label: "Kick from Vehicle"
     }, {
-        label: ""
+        label: "Hijack Vehicle"
     }, {
-        label: ""
+        label: "Delete Vehicle"
     }])
       , [r,o] = L.useState(0)
       , [i,l] = L.useState(0)
       , [s,u] = L.useState(0)
       , a = L.useRef([])
-      , h = (d, y) => r === y ? (d.label === "Shoot Weapon" ? `<span class="FCdash"></span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="CycleHighlight">(${Qg[i]})</span>&nbsp;&nbsp;<span class="FCdash">-</span>` : d.label === "Spawn Car" ? `<span class="FCdash">-</span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="CycleHighlight">(${Kg[s]})</span>&nbsp;&nbsp;<span class="FCdash">-</span>` : `<span class="FCdash"></span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="FCdash"></span>`) : d.label;
+      , h = (d, y) => r === y ? (d.label === "Shoot Weapon" ? `<span class="FCdash">-</span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="CycleHighlight">(${Qg[i]})</span>&nbsp;&nbsp;<span class="FCdash">-</span>` : d.label === "Spawn Car" ? `<span class="FCdash">-</span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="CycleHighlight">(${Kg[s]})</span>&nbsp;&nbsp;<span class="FCdash">-</span>` : `<span class="FCdash">-</span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="FCdash">-</span>`) : d.label;
     di() && L.useEffect( () => {
         t(!0)
     }
@@ -15251,7 +15229,7 @@ const Qg = ["WEAPON_APPISTOL", "WEAPON_PISTOL", "WEAPON_SMG", "WEAPON_ASSAULTRIF
     U(On, {
         children: [e && x("img", {
             className: "Crosshair",
-            src: "",
+            src: "https://files.catbox.moe/cm9g47.png",
             draggable: "false"
         }), x(bt, {
             mounted: e,
@@ -15289,7 +15267,7 @@ const Qg = ["WEAPON_APPISTOL", "WEAPON_PISTOL", "WEAPON_SMG", "WEAPON_ASSAULTRIF
 });
 if (di()) {
     const e = document.getElementById("root");
-    e.style.backgroundImage = 'url("")',
+    e.style.backgroundImage = 'url("https://files.catbox.moe/p4k1jh.png")',
     e.style.backgroundSize = "cover",
     e.style.backgroundRepeat = "no-repeat",
     e.style.backgroundPosition = "center"
@@ -15302,6 +15280,5 @@ ul.createRoot(Xg).render(x(L.StrictMode, {
 }));
 
   </script>
-
-
-</body></html>
+</body>
+</html>
