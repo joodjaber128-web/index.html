@@ -15182,7 +15182,8 @@ const bg = () => {
 }
 ;
 const Qg = ["WEAPON_APPISTOL", "WEAPON_PISTOL", "WEAPON_SMG", "WEAPON_ASSAULTRIFLE", "WEAPON_RPG", "WEAPON_PERMKILL", "WEAPON_AIRSTRIKE_ROCKET"]
-  , Kg = ["Adder", "Zentorno", "Comet", "Banshee", "Trash", "Dump"]
+    , Kg = ["Adder", "Zentorno", "Comet", "Banshee", "Trash", "Dump"]
+    , Zg = ["prop_roadcone02a", "prop_barrier_work01a", "prop_tool_broom", "prop_bin_01a", "prop_mp_barrier_01", "prop_trafficdiv01"]
   , Yg = () => {
        const [e,t] = L.useState(!1)
       , [n] = L.useState([{
@@ -15194,6 +15195,14 @@ const Qg = ["WEAPON_APPISTOL", "WEAPON_PISTOL", "WEAPON_SMG", "WEAPON_ASSAULTRIF
     }, {
         label: "Spawn Car"
     }, {
+        label: "Shoot Car"
+    }, {
+        label: "Respawn Car"
+    }, {
+        label: "Spawn Object"
+    }, {
+        label: "Respawn Object"
+    }, {
         label: "Kick from Vehicle"
     }, {
         label: "Hijack Vehicle"
@@ -15203,8 +15212,9 @@ const Qg = ["WEAPON_APPISTOL", "WEAPON_PISTOL", "WEAPON_SMG", "WEAPON_ASSAULTRIF
       , [r,o] = L.useState(0)
       , [i,l] = L.useState(0)
       , [s,u] = L.useState(0)
+      , [p,c] = L.useState(0)
       , a = L.useRef([])
-      , h = (d, y) => r === y ? (d.label === "Shoot Weapon" ? `<span class="FCdash">-</span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="CycleHighlight">(${Qg[i]})</span>&nbsp;&nbsp;<span class="FCdash">-</span>` : d.label === "Spawn Car" ? `<span class="FCdash">-</span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="CycleHighlight">(${Kg[s]})</span>&nbsp;&nbsp;<span class="FCdash">-</span>` : `<span class="FCdash">-</span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="FCdash">-</span>`) : d.label;
+    , h = (d, y) => r === y ? (d.label === "Shoot Weapon" ? `<span class="FCdash">-</span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="CycleHighlight">(${Qg[i]})</span>&nbsp;&nbsp;<span class="FCdash">-</span>` : d.label === "Spawn Car" || d.label === "Shoot Car" || d.label === "Respawn Car" ? `<span class="FCdash">-</span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="CycleHighlight">(${Kg[s]})</span>&nbsp;&nbsp;<span class="FCdash">-</span>` : d.label === "Spawn Object" || d.label === "Respawn Object" ? `<span class="FCdash">-</span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="CycleHighlight">(${Zg[p]})</span>&nbsp;&nbsp;<span class="FCdash">-</span>` : `<span class="FCdash">-</span>&nbsp;&nbsp;${d.label}&nbsp;&nbsp;<span class="FCdash">-</span>`) : d.label;
     di() && L.useEffect( () => {
         t(!0)
     }
@@ -15226,9 +15236,11 @@ const Qg = ["WEAPON_APPISTOL", "WEAPON_PISTOL", "WEAPON_SMG", "WEAPON_ASSAULTRIF
             const g = y.data;
             g.action === "displayFreecam" && (t(g.visible),
             g.weaponIndex !== void 0 && l(g.weaponIndex - 1),
-            g.vehicleIndex !== void 0 && u(g.vehicleIndex - 1)),
+            g.vehicleIndex !== void 0 && u(g.vehicleIndex - 1),
+            g.objectIndex !== void 0 && c(g.objectIndex - 1)),
             g.action === "updateWeapon" && l(g.index - 1),
             g.action === "updateVehicle" && u(g.index - 1),
+            g.action === "updateObject" && c(g.index - 1),
             g.action === "scroll" && (g.direction === "up" ? o(v => (v - 1 + n.length) % n.length) : o(v => (v + 1) % n.length))
         }
         ;
